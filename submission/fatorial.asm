@@ -4,6 +4,7 @@
 ; 0108 == variavel de controle
 ; 010A == auxiliar
 
+@ /000
 	LD /100
 	SC /200
 	MM /100
