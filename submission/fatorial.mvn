@@ -1,0 +1,29 @@
+; 0100 == N 
+; 0106 == 0001
+; 0108 == variavel de controle
+
+0000 8100
+0002 A200
+0004 9102
+0006 C000
+
+0200 0000 ; subrotina
+0202 9108 ; guarda controle, util na primeira execuçao do loop
+0204 121A ; caso N seja 0
+0206 5106 ; subtrai 1 do controle
+0208 1216 ; checa se controle == 0, para sair do loop
+020A 9108 ; guarda o controle apos a subtraçao
+020C 8100 ; load de N
+020E 6108 ; multiplica N por N-1
+0210 9100 ; guarda N*
+0212 8108 ; load da variavel de controle, para a sequencia do loop
+0214 0202 
+0216 8100 ; load do valor a ser guardado fora da subrotina
+0218 B200
+021A 3001
+021C 9100
+021E B200
+
+; 0100 0003
+0106 0001
+
